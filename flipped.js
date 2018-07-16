@@ -2,7 +2,7 @@ let result ;
 
 let randomVal;
 
-var readline = require("readline-sync");
+var readline = require("readline-sync"); 
 
 randomVal = Math.random();
 
@@ -15,8 +15,8 @@ else{
 var perdiction = readline.question("Please choose head or tails: ");
 
 if(perdiction == result){
-	console.log( perdiction, result, " Great job " + perdiction + " was correct ");
+	console.log( result, " Great job " + perdiction + " was correct ");
 }
 else{
-	console.log(perdiction, result,  "sorry " + perdiction + " was incorrect " );
+	console.log( result,  "sorry " + perdiction + " was incorrect " );
 }

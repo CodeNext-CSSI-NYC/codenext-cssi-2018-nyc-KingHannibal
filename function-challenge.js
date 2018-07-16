@@ -13,10 +13,21 @@ sumDouble(2, 2) → 8
 
 // Declare your function here
 function sumDouble(x , y ){
-  
+  if(x == y){
+   
+    return (x + y)*2 ;
+  } else {
+   
+    return x + y ;
+  }
 }
 // Call it a few times and console.log the result, to make sure it is working
-
+// sumDouble(5, 5);
+// console.log(sumDouble(5 , 5));
+// sumDouble(10 , 7);
+// console.log(sumDouble(10, 7));
+// sumDouble(15, 17);
+// console.log(sumDouble(15 , 17));
 // Test out your function using our provided tests by uncommenting the line testSumDouble() at the very bottom of this file
 
 /******************************************************************************
@@ -30,7 +41,14 @@ makes10(1, 9) → true
 *******************************************************************************/
 
 // Declare your function here
+function makes10(a ,b){
+  if(a == 10 || b==10|| a + b == 10){
+    return true;
+  } else {
+    return false;
+  }
 
+}
 // Call it a few times and console.log the result, to make sure it is working
 
 // Test out your function using our provided tests by uncommenting the line testMakes10() at the very bottom of this file
@@ -50,7 +68,16 @@ parrotTrouble(false, 6) → false
 *******************************************************************************/
 
 // Declare your function here
+function parrotTrouble (talking , hour){
+  if(talking == true && hour < 7|| talking==true && hour > 20){
+    return true;
 
+  } else{
+
+      return false;
+}
+
+}
 // Call it a few times and console.log the result, to make sure it is working
 
 // Test out your function using our provided tests by uncommenting the line testParrotTrouble() at the very bottom of this file
@@ -98,6 +125,6 @@ function testParrotTrouble() {
 }
 
 
-// testSumDouble();
-// testMakes10();
-// testParrotTrouble();
+ testSumDouble();
+ testMakes10();
+testParrotTrouble();

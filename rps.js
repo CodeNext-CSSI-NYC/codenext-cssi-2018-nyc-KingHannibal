@@ -6,9 +6,7 @@ let paper = 2;
 
 let scissors = 3;
 
-let randomInt = require('random-int');
 
-let compChoice = randomInt(1 ,3);
 
 let wannaPlay = readline.question(" Would you like to play a game of Rock-Paper-Scissors  (yes/no) : ");
 
@@ -31,14 +29,14 @@ if (userChoice == "rock"){
 userChoice = scissors ;
 }
 
-
+let compChoice ;
 	// letting you know what the computer has chose!
 if (compChoice == 1 ){
 	console.log("the computer chose rock!" );
 } else if(compChoice == 2){
 	console.log("The computer chose paper!" );
 } else{
-	console.log("ther computer chose scissors");
+	console.log("the computer chose scissors");
 }
 
 // how you actually win

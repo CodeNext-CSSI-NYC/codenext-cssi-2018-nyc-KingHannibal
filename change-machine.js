@@ -20,7 +20,6 @@ const dimes = Math.floor( (cents-(quarters*25) ) / 10);
 console.log(" Dimes(s): " + dimes );
 
 const nickels = Math.floor( (cents-((quarters*25)+(dimes*10)) ) / 5);
-
 console.log(" Nickels(s): " + nickels );
 
 const pennies = Math.floor( (cents-((quarters*25)+(dimes*10)+(nickels*5)) ) / 1);

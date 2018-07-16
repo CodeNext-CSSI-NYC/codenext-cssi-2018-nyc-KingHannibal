@@ -69,7 +69,7 @@ function average(twoNumbers , twoNumbers2){
 	console.log("The average of " + twoNumbers + " and " + twoNumbers2 +   " is "+ (twoNumbers + twoNumbers2)/2 );
 }
 
-average(5,5);
+ let result =  average(5,5);
 
 
 

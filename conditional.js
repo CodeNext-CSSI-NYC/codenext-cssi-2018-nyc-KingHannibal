@@ -3,7 +3,7 @@
 
 // 1. Ask the user for a number and print whether it is positive or negative or zero.
 var readline = require("readline-sync");
-var userNum = readline.question("Please enter a number: ");
+var userNum = 
 if ( userNum > 0){
 	 console.log(userNum + " is a positive number ");
 }
