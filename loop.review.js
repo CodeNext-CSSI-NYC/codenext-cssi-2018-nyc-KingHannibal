@@ -39,12 +39,12 @@
 // add up to more than 100 in total.
 // For example, it might end after two times through the loop if I type 77, 44.
 // But it might take many more attempts if I type 1, 1, 1, 1, 1 ....
-// let sum = 0;
-// while(sum<100){
-//  let add = parseInt(readline.question( "Please enter a number: " ));
-//  sum = sum + add;
-// }
-// console.log("you made 100 ");
+let sum = 0;
+while(sum<100){
+ let add = parseInt(readline.question( "Please enter a number: " ));
+ sum = sum + add;
+}
+console.log("you made 100 ");
 
 
 // 5a. Use a loop to make this pattern:
@@ -75,19 +75,22 @@
 //
 // ***********
 //
-let string = "***********" ;
-for(i=0;i<=7;i++){
-	console.log(string);
-}
+// let string = "***********" ;
+// for(i=0;i<=7;i++){
+// 	console.log(string);
+// }
 
-// 6. Use this line:
-// let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-// Set up a for loop that goes through this string.
-// Do not use 26 or 25 in your for loop. Instead use the .length property of strings.
-// Inside the for loop, store the corresponding letter for each index in a variable called letter.
-// Then, print out the toLowerCase() version of each letter.
-// You should see the alphabet, in lower case, with a new letter on each line.
-
+// // 6. Use this line:
+//  let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// // Set up a for loop that goes through this string.
+// // Do not use 26 or 25 in your for loop. Instead use the .length property of strings.
+// // Inside the for loop, store the corresponding letter for each index in a variable called letter.
+// // Then, print out the toLowerCase() version of each letter.
+// // You should see the alphabet, in lower case, with a new letter on each line.
+// for(i=0;i < alphabet.length;i++){
+// 	let  letter = alphabet[i];
+// 	console.log(letter.toLowerCase());
+// }
 
 
 // 7. Last time we listed out all of the factors of a number.
@@ -103,3 +106,25 @@ for(i=0;i<=7;i++){
 // values from 1 to number - 1 and add together all the ones that are factors of
 // number. Return true if this sum is equal to number, false otherwise.
 // Make sure it returns true for 6 and 28 and false for pretty much anything else.
+function perfect(num){
+	let sum = 0;
+	for(let i=1;i<num;i++){
+		if(num % i == 0 ){
+			sum = sum + i;
+		}
+	}
+	if(sum == num){
+		console.log("this number is perfect");
+	} else{
+		console.log("sorry its not perfect");
+	}
+}
+
+
+perfect(6);
+
+
+
+
+
+

@@ -1,4 +1,4 @@
- var readline = require("readline-sync");
+ 3 var readline = require("readline-sync");
 
 // 1. Do each step below on a separate line
 // Create an array with exactly five numbers.

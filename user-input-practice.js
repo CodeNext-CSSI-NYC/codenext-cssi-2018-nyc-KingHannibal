@@ -19,4 +19,3 @@ console.log(" The word " + anyWord  +  " starts with the letter " +  anyWord.cha
 // 4. Ask the user to enter two numbers, and print out "The average of ___ and ___ is ____", but with the blanks filled in.
 var twoNumbers = parseFloat(readline.question(" Please enter any number: "));
 var twoNumbers2 = parseFloat(readline.question(" Please enter any second number: "));
-console.log("The average of " + twoNumbers + " and " + twoNumbers2 +   " is "+ (twoNumbers + twoNumbers2)/2 );
