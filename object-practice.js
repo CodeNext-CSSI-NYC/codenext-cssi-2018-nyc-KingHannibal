@@ -1,3 +1,4 @@
+let readline = require("readline-sync");
 // // 1. Create an object called myObj with the following key-value pairs:
 // // a -> 23
 // // b -> 12
@@ -114,6 +115,7 @@ console.log(eachLetterOnce("supercalifragilisticexpialidocious"));
 // // 5. Write a function that takes one parameter, an object, and prints out a line
 // // like the followng for every key-value pair in the object:
 // // "The key ___ has a value of ___"
+let userObject ;
  function printKeysAndValues(obj) {
 
 
