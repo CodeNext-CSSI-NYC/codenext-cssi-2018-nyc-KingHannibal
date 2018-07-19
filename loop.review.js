@@ -45,7 +45,7 @@ while(sum<100){
  sum = sum + add;
 }
 console.log("you made 100 ");
-
+userGuess = stop ;
 
 // 5a. Use a loop to make this pattern:
 // *

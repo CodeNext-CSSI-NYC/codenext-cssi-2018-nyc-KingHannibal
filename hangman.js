@@ -2,20 +2,22 @@ let fs = require('fs');
 const words = fs.readFileSync('words.txt').toString().split("\n");
 let readline = require('readline-sync');
 let randomInt = require('random-int');
-
+let userGuess ; 
+// let  chances = 0;
+let maxLives = 6;
+let stop ;
 // This statement gives us all the 7 and 8 letter words from the list.
 // Those seems like good lengths for hangman, but feel free to change it up.
 let wordsToPickFrom = words.filter(word => word.length == 7 || word.length == 8);
 
 // Let's make a hangman game. Step 1 is to randomly choose a word from wordsToPickFrom
 // Use the random-int package and pick a random index from wordsToPickFrom
-let randomWord = wordsToPickFrom[randomInt(0, wordsToPickFrom.length -1)];
+let randomWord = wordsToPickFrom[randomInt(0, wordsToPickFrom.length-1)];
 // We will use an array to track the letters that the user has guessed so far.
 // At the start, for a seven letter word that array will look like this:
 // ["_", "_", "_", "_", "_", "_", "_"]
 let  tracker = [];
-let i ;
-for( i = 0 ; i < randomWord.length;i++){
+for(let i = 0 ; i < randomWord.length;i++){
 	tracker.push("_");
 }
 // Go ahead and create this array using a for loop. Note that its length will
@@ -23,13 +25,19 @@ for( i = 0 ; i < randomWord.length;i++){
 // We will call this array tracker. Whenever the user guesses letters that are in the word,
 // We will replace the underscores (_) with the letter. So if the word is musical
 // and you guess u, this tracker should become ["_", "U", "_", "_", "_", "_", "_"]
-
+userGuess= readline.question("Please Guess a letter  : ");
+if (userGuess.length != 1){
+console.log("YoU dID NOt EnTEr A lEtTeR!!");
+userGuess = stop ;
+}
 // Create a function called render that takes in the tracker array and prints it out nicely.
 // When you print it out it should look like:
 // _ U _ _ _ _ _
 // (use join to make a string that looks like that)
+
 // Call your functions with a few different tracker arrays to make sure it works
 function render(arr){
+
 	return arr.join(' ');
 }
 
@@ -37,21 +45,20 @@ console.log(render(tracker));
 
 // The main part of the game is:
 
-userGuess= readline.question("Please Guess a letter  : ");
 // Ask the user to guess a letter
-let check ; 
-for(check = 0 ; check < randomWord.length ; check++){
-	if(userGuess == randomWord[check]){
-		tracker[check] = userGuess ;
+ 
+for(let check = 0 ; check < randomWord.length ;check++){
+	console.log(randomWord);
+	if( randomWord.indexOf(userGuess) >= 0 &&  maxLives != 0){
+		randomWord.charAt(check) +=  ; 
 		console.log(render(tracker));
+		console.log("you guessed right now try and get the whole word");
+		userGuess= readline.question("Please Guess a letter  : ");
 	} else {
+		console.log("you guessed wrong try again");
 		userGuess = readline.question("Please Guess a letter  : ");
+		maxLives-- ;
 	}
-}
-
-
-while (tracker[i] == "_") {
-	userGuess = readline.question("Please Guess a letter  : ");
 }
 
 // Use a for loop to go through the secret word string. Each time the letter the
