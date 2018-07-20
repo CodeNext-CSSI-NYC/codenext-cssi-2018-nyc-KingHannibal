@@ -50,7 +50,7 @@ console.log(render(tracker));
 for(let check = 0 ; check < randomWord.length ;check++){
 	console.log(randomWord);
 	if( randomWord.indexOf(userGuess) >= 0 &&  maxLives != 0){
-		randomWord.charAt(check) +=  ; 
+		
 		console.log(render(tracker));
 		console.log("you guessed right now try and get the whole word");
 		userGuess= readline.question("Please Guess a letter  : ");
